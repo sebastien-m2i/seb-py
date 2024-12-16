@@ -1,0 +1,23 @@
+PATH;ID;UUID;REFERENCE;LABEL;WEIGHT;NATURE;TYPE;STATUS;DESCRIPTION;PRE_REQUISITE;CREATED_ON;CREATED_BY;LAST_MODIFIED_ON;LAST_MODIFIED_BY;ACTION;EXPECTED_RESULT
+POE24/Exercice Seb/Calculette;5637;42bc72e8-4aa8-48a4-97fb-9a4aa4c925ac;;01OK - Saisir 2 valeurs dans calculette et afficher un résultat;VERY_HIGH;NAT_UNDEFINED;TYP_UNDEFINED;APPROVED;"<p>Saisir 2 valeurs dans calculette et afficher un résultat</p>
+";"<p>Etre connecté en python sur la console.</p>
+
+<p>executer exercice/seb_calculette.py</p>
+
+<p> </p>
+";12/12/2024 11:53;user10;12/12/2024 12:19;user10;"<p>Saisir la première valeur 1 égale à {ope1} dans prompt ope1></p>
+";"<p>Affichage de la valeur {ope1}</p>
+
+<p>Passage au prompt ope>2</p>
+"
+POE24/Exercice Seb/Calculette;5637;42bc72e8-4aa8-48a4-97fb-9a4aa4c925ac;;01OK - Saisir 2 valeurs dans calculette et afficher un résultat;VERY_HIGH;NAT_UNDEFINED;TYP_UNDEFINED;APPROVED;"<p>Saisir 2 valeurs dans calculette et afficher un résultat</p>
+";"<p>Etre connecté en python sur la console.</p>
+
+<p>executer exercice/seb_calculette.py</p>
+
+<p> </p>
+";12/12/2024 11:53;user10;12/12/2024 12:19;user10;"<p>Saisir la deuxième valeur égale à {ope2} dans prompt ope2></p>
+";"<p>Affichage de la valeur {ope2}</p>
+
+<p>Puis Résultats: (addition, soustraction, division, multiplication)</p>
+"

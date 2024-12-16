@@ -38,6 +38,9 @@ def modifier_stats_personnage(personnage:object):
     if personnage:
         personnage["niveau"] += 1
         personnage["points_de_vie"] += 20
+        print(f"\033[92m")
+        print(f"{personnage["nom"]} est au niveau {personnage["niveau"]} et son total de points de vie est à {personnage["points_de_vie"]}")
+        print(f"\033[0m")
 
 def utiliser_potion_personnage(personnage:object):
     if personnage:
@@ -46,14 +49,38 @@ def utiliser_potion_personnage(personnage:object):
             if inventaire[it]["nom"] == POTION:
                 inventaire.pop(it)
                 personnage["points_de_vie"] += random.randint(1,50)
+                print(f"\033[92m")
+                print(f"{personnage["nom"]} a bu une potion, son total de points de vie est à {personnage["points_de_vie"]}")
+                print(f"\033[0m")
                 break
 
 def details_personnage(personnage:object):
     if personnage:
         print(f"= Fiche personnage {personnage["nom"]}")
+        print('+'+'='*60+'+')
+        tab_left = []
+        tab_right = [
+            "|         INVENTAIRE         |",
+            "+----------------------------+"
+            ]
         for cle, valeur in personnage.items():
-            print(f"{cle}: {valeur}")
-        
+            if cle!="inventaire":
+                tab_left.append(f"| {cle:<14}: {valeur:<14}")
+            else:
+                if len(valeur)>0:
+                    for it in range(len(valeur)):
+                        tab_right.append(f"| {valeur[it]["quantité"]} {valeur[it]["nom"]:<24} |")
+        for it in range(max(len(tab_right), len(tab_left))):
+            if it < len(tab_left):
+                 print(tab_left[it], end="")
+            else:
+                print("|",' '*30, end="")
+            if it < len(tab_right):
+                 print(tab_right[it])
+            else:
+                print("|",' '*26,"|")
+        print('+'+'='*60+'+')
+    
 def attaquer(personnage1:object, personnage2:object):
     if personnage1 and personnage2:
         print(f"= {personnage1["nom"]} attaque {personnage2["nom"]}")
@@ -66,9 +93,11 @@ def attaquer(personnage1:object, personnage2:object):
             while len(inventaire2)>0:
                 inventaire1.append(inventaire2.pop())
 
-def getPersonnageByKey():
+def getPersonnageByKey(prompt:str="Personnage"):
     try:
-        key = input("identifiant du personnage :")
+        for key in dico_personnages:
+            prompt = prompt + "/" + key
+        key = input(f"{prompt}>")
         return dico_personnages[key]
     except KeyError as err:
         return None
@@ -86,7 +115,7 @@ while True:
     print("(A)ttaquer un personnage")
     print("(Q)Quitter")
     print("---------------------------------------------------")
-    choix_Menu = input("Votre choix (IMUDAQ)>")
+    choix_Menu = input(f"Votre choix (DIMUAQ)>")
     match choix_Menu.upper():
         case "D":
             # Détail du personnage
@@ -102,6 +131,6 @@ while True:
             utiliser_potion_personnage(getPersonnageByKey())
         case "A":
             # Attaquer un personnage
-            attaquer(getPersonnageByKey(),getPersonnageByKey())
+            attaquer(getPersonnageByKey("Attaquant"),getPersonnageByKey("Défenseur"))
         case "Q":
             exit()

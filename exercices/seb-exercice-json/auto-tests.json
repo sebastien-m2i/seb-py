@@ -1,0 +1,12 @@
+[
+    {
+        "test":"CT1",
+        "step":"1",
+        "expected":[]
+    },
+    {
+        "test":"CT1",
+        "step":"2",
+        "expected":"Message entrez une seconde valeur:"
+    }
+]

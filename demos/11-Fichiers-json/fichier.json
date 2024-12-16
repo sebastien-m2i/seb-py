@@ -1,0 +1,12 @@
+[
+    {
+        "titre":"produit1",
+        "prix":"9.99",
+        "stock":"8"
+    },
+    {
+        "titre":"produit2",
+        "prix":"4.99",
+        "stock":"22"
+    }
+]
