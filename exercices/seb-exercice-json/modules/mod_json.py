@@ -13,7 +13,7 @@ def lire_fichier_json():
 
 def dump_fichier_json(list:list):
     fichier = open(PATH_JSON, "w", encoding="UTF-8")
-    json.dump(list,fichier, indent=4)
+    json.dump(list,fichier, indent=4, ensure_ascii=False)
 
 def charger_liste():
     return lire_fichier_json() if os.path.exists(PATH_JSON) else []

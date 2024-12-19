@@ -40,5 +40,11 @@
         "artiste": "artiste776",
         "categorie": 3,
         "score": 5
+    },
+    {
+        "titre": "T\u00eate @",
+        "artiste": "artiste $",
+        "categorie": 1,
+        "score": 2
     }
 ]

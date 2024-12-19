@@ -1,0 +1,16 @@
+[
+    {
+        "nom":"Seb",
+        "classe":"Mage",
+        "niveau":1,
+        "points_de_vie":16,
+        "inventaire": [{"nom":"ration","quantité":3},{"nom":"potion_soin","quantité":2},{"nom":"potion_feu","quantité":2}]
+    },
+    {
+        "nom":"Maxime",
+        "classe":"Guerrier",
+        "niveau":1,
+        "points_de_vie":18,
+        "inventaire": [{"nom":"ration","quantité":1},{"nom":"armure_cuir","quantité":1}]
+    }
+]

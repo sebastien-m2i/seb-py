@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.0/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.0/brython_stdlib.js">
+    </script>
+</head>
+
+<style>
+    *{
+        font-family: sans-serif;
+        font-weight: normal;
+        font-size: 1.1em;
+    }
+    td{
+        background-color: #ccc;
+        padding: 10px 30px 10px 30px;
+        border-radius: 0.2em;
+        text-align: center;
+        cursor: default;
+    }
+    .input{
+        border-color: #000;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px 30px 10px 30px;
+        text-align: right;
+    }
+</style>
+
+<body>
+
+<!--
+    print("------------------- Jeu de rôle -------------------")
+    prompt:str=">"
+    if index == 0:
+        print("(N)ouvelle campagne")
+        print("(C)harger la campagne")
+    else:
+        print("---------------------------------------------------")
+        print("(A)ctiver personnage")
+        print("(M)archand - acheter un objet")
+        print("(D)étail personnage")
+        print("(S)auver la campagne")
+        prompt = groupe[index-1].nom + prompt
+    print("(Q)uitter")
+    print("---------------------------------------------------")
+    choix_Menu = input(f"\033[93m{prompt}\033[0m")
+    match choix_Menu.upper():
+        case "N":
+            groupe = creation_groupe(2)
+            index = 1
+        case "C":
+            groupe = charger_personnages()
+            index = 1
+        case "A":
+            index = liste_personnages(groupe)
+        case "M":
+            acheter_marchand(groupe, index)
+        case "D":
+            personnage:Personnage = groupe[index-1]
+            personnage.details_personnage()
+        case "S":
+            sauver_personnages(groupe)
+        case "Q":
+            exit()
+    -->
+
+<!--
+    xpath
+    /html/body/table/tr[3]/td[2]
+    -->
+
+<script type="text/python">
+    from browser import document, html
+
+    def change(event):
+        document["result"].textContent = "Quitter"
+
+    calc = html.TABLE()
+    calc <= html.TR(html.TH("Menu du jeu de rôle", id="title"))
+    lines = [
+    {"id":"N","content":"Nouvelle campagne"},
+    {"id":"C","content":"Charger la campagne"},
+    {"id":"A","content":"Activer personnage"},
+    {"id":"M","content":"Marchand - acheter un objet"},
+    {"id":"D","content":"Détail personnage"},
+    {"id":"S","content":"Sauver la campagne"},
+    {"id":"Q","content":"Quitter"}
+    ]
+    
+    calc <= (html.TR(html.TD(line["content"], id=line["id"])) for line in lines)
+    
+    calc <= html.TR(html.TD("Vide", id="result"))
+
+    document <= calc
+
+    document["Q"].bind("click", change)
+</script>
+
+</body>
+
+</html>

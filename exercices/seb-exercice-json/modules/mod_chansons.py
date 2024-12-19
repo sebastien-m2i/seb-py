@@ -7,7 +7,7 @@ def print_chansons(mes_chansons:list):
         print("+----+--------------------------------+----------------------+---------------+-------+")
         for it in range(len(mes_chansons)):
             chanson = mes_chansons[it]
-            print(f"|{it+1:>3} | {chanson["titre"]:<30} | {chanson["artiste"]:<20} | {chanson["categorie"]:<13} | {chanson["score"]:>5} |")
+            print(f"|{it+1:>3} | {chanson["titre"]:<30} | {chanson["artiste"]:<20} | {chanson["points_de_vie"]:<13} | {chanson["niveau"]:>5} |")
         print("+----+--------------------------------+----------------------+---------------+-------+")
 
 def ajouter_chanson(mes_chansons:list):

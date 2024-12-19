@@ -1,0 +1,68 @@
+[
+    {
+        "id":1,
+        "nom":"ration",
+        "categorie":"nourriture",
+        "prix":1
+    },
+    {
+        "id":2,
+        "nom":"potion de soin",
+        "categorie":"potion",
+        "prix":5
+    },
+    {
+        "id":3,
+        "nom":"potion de feu",
+        "categorie":"potion",
+        "prix":1
+    },
+    {
+        "id":4,
+        "nom":"dague",
+        "categorie":"arme",
+        "prix":4
+    },
+    {
+        "id":5,
+        "nom":"épée",
+        "categorie":"arme",
+        "prix":6
+    },
+    {
+        "id":6,
+        "nom":"bouclier",
+        "categorie":"arme",
+        "prix":5
+    },
+    {
+        "id":7,
+        "nom":"espadon",
+        "categorie":"arme",
+        "prix":8
+    },
+    {
+        "id":8,
+        "nom":"armure de cuir",
+        "categorie":"armure",
+        "prix":8
+    },
+    {
+        "id":9,
+        "nom":"armure de maille",
+        "categorie":"armure",
+        "prix":12
+    },
+    {
+        "id":10,
+        "nom":"parchemin de transfert",
+        "categorie":"parchemin",
+        "prix":8
+    },
+    {
+        "id":11,
+        "nom":"parchemin de sommeil",
+        "categorie":"parchemin",
+        "prix":4
+    }
+]

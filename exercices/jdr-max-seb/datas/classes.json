@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "nom":"guerrier",
+        "desc":"Le guerrier se bat en première ligne, avec des armes de mélée",
+        "pv_niveau":8
+    },
+    {
+        "id":2,
+        "nom":"rodeur",
+        "desc":"le rodeur peut se battre à la fois à distance et en mélée, utilisant l'arc au besoin",
+        "pv_niveau":6
+    },
+    {
+        "id":3,
+        "nom":"mage",
+        "desc":"le mage est spécialisé dans l'art de jeter des sorts à distance",
+        "pv_niveau":4
+    }
+]

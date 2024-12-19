@@ -1,0 +1,21 @@
+[
+    {
+        "nom": "Fred",
+        "classe": "rodeur",
+        "niveau": 1,
+        "points_de_vie": 10,
+        "inventaire": [
+            {
+                "nom": "armure de maille",
+                "quantité": 3
+            }
+        ]
+    },
+    {
+        "nom": "Sylvie",
+        "classe": "mage",
+        "niveau": 1,
+        "points_de_vie": 10,
+        "inventaire": []
+    }
+]
